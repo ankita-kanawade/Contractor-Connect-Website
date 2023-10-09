@@ -5,6 +5,7 @@ Contractor-Connect-Website is a web application built using Java Spring Boot, My
 ## Table of Contents
 
 - [Features](#features)
+- [Images](#images)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
@@ -21,6 +22,9 @@ Contractor-Connect-Website is a web application built using Java Spring Boot, My
 4. **Search Functionality**: Users can search for contractors based on various criteria.
 
 5. **Other Features**: Users can connect with Contractor and manage construstion work.
+
+## Images
+
 
 ## Technologies Used
 
