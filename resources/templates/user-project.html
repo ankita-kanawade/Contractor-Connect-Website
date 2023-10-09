@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Website</title>
+
+<!-- font awesome cdn link  -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+<!-- custom css file link  -->
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+table {
+	font-family: 'Arial', sans-serif;
+	width: 100%;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+body {
+	background: url(/images/home-slide-2.jpg) no-repeat;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+	<!-- header section starts  -->
+	<header class="header">
+		<a href="#" class="logo">Construct<span>zen</span></a>
+		<nav class="navbar">
+			<a href="#home" th:href="@{/MainFile}">Home</a> <a
+				th:href="@{/contractoruser}">Contractor</a> <a
+				th:href="@{/userproject}">Project</a> <a th:href="@{/gallary}">Gallery</a>
+			<a th:href="@{/logout}">Logout</a>
+		</nav>
+
+		<div class="icons">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<div id="info-btn" class="fas fa-info-circle"></div>
+			<div id="search-btn" class="fas fa-search"></div>
+		</div>
+
+		<form action="/userproject/search" method="GET" class="search-form">
+			<input type="text" name="id" placeholder="Search by ID"
+				id="search-box"> <label for="search-box"
+				class="fas fa-search"></label>
+		</form>
+		<div class="contact-info">
+			<div id="close-contact-info" class="fas fa-times"></div>
+			<div class="info">
+				<i class="fas fa-phone"></i>
+				<h3>Phone Number</h3>
+				<p>
+					<a href="tel:+919359626426">+91 9359626426</a>
+				</p>
+			</div>
+			<div class="info">
+				<i class="fas fa-envelope"></i>
+				<h3>Email Address</h3>
+				<p>
+					<a href="mailto:ankitakanawade123@gmail.com">ankitakanawade123@gmail.com</a>
+				</p>
+			</div>
+			<div class="share">
+				<a href="http://www.linkedin.com/in/ankita-kanawade" target="_blank"
+					class="fab fa-linkedin"></a>
+			</div>
+		</div>
+	</header>
+	<!-- header section ends -->
+
+	<div class="card"
+		style="padding-top: 120px; background: url(images/home-slide-2.jpg) no-repeat;">
+		<div class="card-body">
+			<div th:switch="${employees}" class="container my-5">
+				<div class="col-md-10">
+					<div th:case="*">
+						<table class="table table-striped"
+							style="background-color:#e1f0ff;">
+							<thead>
+								<tr style="background-color: black; color: white;">
+								<th>Project Id</th>
+									<th>Budget</th>
+									<th>Duration</th>
+									<th>Scope</th>
+									<th>Select</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="employee : ${employees}">
+								<td th:text="${employee.id}"></td>
+									<td th:text="${employee.budget}"></td>
+									<td th:text="${employee.duration}"></td>
+									<td th:text="${employee.scope}"></td>
+									<td><a th:href="@{/success}"
+										class="btn btn-primary next-button"> <i
+											class="fas fa-arrow-right"></i> Next
+									</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div th:if="${employees.isEmpty()}">
+								<div th:if="${errorMessage}" class="alert alert-danger">
+									<span th:text="${errorMessage}"></span>
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+	<!-- custom js file link  -->
+	<script src="js/script.js"></script>
+
+	<script>
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+</body>
+</html>

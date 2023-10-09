@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Construction Website</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <a href="#" class="logo">Construct<span>zen</span></a>
+
+   <nav class="navbar">
+      <a href="#home" th:href="@{/MainFile}">Home</a> 
+	  <a th:href="@{/contractoruser}">Contractor</a>
+	  <a th:href="@{/userproject}">Project</a>
+	  <a th:href="@{/gallary}">Gallery</a>
+      <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#blogs">blogs</a>
+      <a th:href="@{/logout}">Logout</a>
+   </nav>
+
+   <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="info-btn" class="fas fa-info-circle"></div>
+   </div>
+</header>
+
+<div class="contact-info">
+   <div id="close-contact-info" class="fas fa-times"></div>
+
+   <div class="info">
+      <i class="fas fa-phone"></i>
+      <h3>Phone Number</h3>
+      <p><a href="tel:+919359626426">+91 9359626426</a></p>
+   </div>
+
+   <div class="info">
+      <i class="fas fa-envelope"></i>
+      <h3>Email Address</h3>
+      <p><a href="mailto:ankitakanawade123@gmail.com">ankitakanawade123@gmail.com</a></p>
+   </div>
+
+   <div class="share">
+      <a href="http://www.linkedin.com/in/ankita-kanawade" target="_blank" class="fab fa-linkedin"></a>
+   </div>
+</div>
+
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="swiper home-slider">
+
+      <div class="swiper-wrapper">
+
+         <section class="swiper-slide slide" style="background: url(images/home-slide-1.jpg) no-repeat;">
+            <div class="content">
+               <h3>we provide best service</h3>
+               <p >Constructzen is a construction website that offers a range of contractors and project management services tailored to meet the specific needs of users.</p>
+               <a href="#about" class="btn">get started</a>
+            </div>
+         </section>
+
+         <section class="swiper-slide slide" style="background: url(images/home-slide-2.jpg) no-repeat;">
+            <div class="content">
+               <h3>making dream come to life</h3>
+               <p >Constructzen is a construction website that offers a range of contractors and project management services tailored to meet the specific needs of users.</p>
+               <a href="#about" class="btn">get started</a>
+            </div>
+         </section>
+
+         <section class="swiper-slide slide" style="background: url(images/home-slide-3.jpg) no-repeat;">
+            <div class="content">
+               <h3>from concept to creation</h3>
+                <p >Constructzen is a construction website that offers a range of contractors and project management services tailored to meet the specific needs of users.</p>
+               <a href="#about" class="btn">get started</a>
+            </div>
+         </section>
+
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading"> about us </h1>
+
+   <div class="row">
+
+      <div class="video">
+         <video src="images/about-vid.mp4" loop muted autoplay></video>
+      </div>
+
+      <div class="content">
+         <h3 style="color: #4dd8f8;">We will provide you the best work which you dreamt for!</h3>
+         <p>Constructzen is a construction website that offers comprehensive contractor services and efficient project management tailored to meet the unique needs of users. With a focus on quality and customer satisfaction, Constructzen is dedicated to delivering exceptional construction solutions.</p>
+      </div>
+
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3>1</h3>
+         <p>Select Contractor</p>
+      </div>
+
+      <div class="box">
+         <h3>2</h3>
+         <p>Manage Project</p>
+      </div>
+
+      <div class="box">
+         <h3>3</h3>
+         <p>Fix Budget</p>
+      </div>
+
+      <div class="box">
+         <h3>4</h3>
+         <p>Complete Project</p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+   <h1 class="heading"> our services </h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/service-1.png" alt="">
+         <h3>building construction</h3>
+     </div>
+
+      <div class="box">
+         <img src="images/service-2.png" alt="">
+         <h3>house renovation</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/service-3.png" alt="">
+         <h3>architechture design</h3>
+     </div>
+
+      <div class="box">
+         <img src="images/service-4.png" alt="">
+         <h3>material supply</h3>
+     </div>
+
+      <div class="box">
+         <img src="images/service-5.png" alt="">
+         <h3>construction consultant</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/service-6.png" alt="">
+         <h3>interior design</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/service-7.png" alt="">
+         <h3>building maintenance</h3>
+     </div>
+
+      <div class="box">
+         <img src="images/service-8.png" alt="">
+         <h3>building renovation</h3>
+      </div>
+      
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+<!-- reviews section starts  -->
+
+<section class="reviews">
+
+   <h1 class="heading"> clients reviews </h1>
+
+   <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <p>Highly professional and knowledgeable. They provided excellent guidance throughout the project, resulting in a successful outcome.</p>
+            <div class="user">
+               <img src="images/review-1.jpg" alt="">
+               <div class="info">
+                  <h3>Ankita Kanawade</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+          <div class="swiper-slide slide">
+            <p>I can't recommend them enough! Their attention to detail and commitment to client satisfaction sets them apart from the competition.</p>
+            <div class="user">
+               <img src="images/pic-2.png" alt="">
+               <div class="info">
+                  <h3>Lisa R.</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Exceptional service! The team went above and beyond to deliver outstanding results within our tight deadline.</p>
+            <div class="user">
+               <img src="images/pic-1.png" alt="">
+               <div class="info">
+                  <h3>John D.</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- reviews section ends -->
+
+<!-- contact section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+   <h1 class="heading"> our blogs </h1>
+
+   <div class="swiper blogs-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/blog-1.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Why Constructzen is the Go-To Platform for Contractors and Project Management?</h3>
+               <p>Discover how Constructzen revolutionizes the construction industry by offering a comprehensive platform that connects contractors with users seeking construction services. With its user-centric approach, Constructzen effectively manages projects based on the unique needs of each user, ensuring successful outcomes.</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/blog-2.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Streamlining Construction Projects with Constructzen: A Game-Changer for Contractors</h3>
+               <p>Explore how Constructzen simplifies the construction process for contractors. By leveraging innovative tools and technologies Constructzen enables contractors to efficiently manage and execute projects. From organizing resources to tracking progress and communicating with clients.</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="images/blog-3.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Personalized Construction Solutions: Constructzen Puts Users in Control</h3>
+               <p>Learn how Constructzen prioritizes user needs by offering personalized construction solutions. Whether it's a residential renovation or a commercial construction project, Constructzen allows users to define their requirements, preferences, and budget. By customizing project management strategies accordingly.</p>
+            </div>
+         </div>
+
+     
+      </div>
+
+   </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- client logo section starts -->
+
+<section class="logo-container">
+   <div class="swiper logo-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide"><img src="images/client-logo-1.png" alt=""></div>
+         <div class="swiper-slide slide"><img src="images/client-logo-2.png" alt=""></div>
+         <div class="swiper-slide slide"><img src="images/client-logo-3.png" alt=""></div>
+         <div class="swiper-slide slide"><img src="images/client-logo-4.png" alt=""></div>
+         <div class="swiper-slide slide"><img src="images/client-logo-5.png" alt=""></div>
+         <div class="swiper-slide slide"><img src="images/client-logo-6.png" alt=""></div>
+      </div>
+   </div>
+</section>
+
+<!-- client logo section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="links">
+      <a class="btn" th:href="@{/MainFile}">home</a>
+      <a class="btn" th:href="@{/contractoruser}">Contractor</a>
+      <a class="btn" th:href="@{/userproject}">Project</a>
+      <a class="btn" th:href="@{/gallary}">Gallery</a>
+      <a class="btn" href="#about">about</a>
+      <a class="btn" href="#services">services</a>
+      <a class="btn" href="#blogs">blogs</a>
+
+   </div>
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+
+lightGallery(document.querySelector('.projects .box-container'));
+
+</script>
+
+</body>
+</html>

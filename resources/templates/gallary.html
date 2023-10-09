@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Construction Website</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <a href="#" class="logo">Construct<span>zen</span></a>
+   <nav class="navbar">
+      <a href="#home" th:href="@{/MainFile}">Home</a> 
+	  <a th:href="@{/contractoruser}">Contractor</a>
+	  <a th:href="@{/userproject}">Project</a>
+	  <a th:href="@{/gallary}">Gallery</a>
+	  <a th:href="@{/logout}">Logout</a>
+   </nav>
+
+   <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="info-btn" class="fas fa-info-circle"></div>
+   </div>
+</header>
+
+<div class="contact-info">
+
+   <div id="close-contact-info" class="fas fa-times"></div>
+
+   <div class="info">
+  <i class="fas fa-phone"></i>
+  <h3>Phone Number</h3>
+  <p><a href="tel:+919359626426">+91 9359626426</a></p>
+</div>
+
+
+   <div class="info">
+   		<i class="fas fa-envelope"></i>
+   		<h3>email address</h3>
+   		<p><a href="mailto:ankitakanawade123@gmail.com">ankitakanawade123@gmail.com</a></p>
+	</div>
+
+
+	<div class="share">
+   	<a href="http://www.linkedin.com/in/ankita-kanawade" target="_blank" class="fab fa-linkedin"></a>
+	</div>
+
+
+</div>
+
+<!-- header section ends -->
+<!-- projects section starts  -->
+
+<section class="projects" id="projects">
+
+   <h1 class="heading"> our projects </h1>
+
+   <div class="box-container">
+
+      <a href="images/project-1.jpg" class="box">
+         <div class="image">
+            <img src="images/project-1.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>dream home</h3>
+            </div>
+         </div>
+      </a>
+
+      <a href="images/project-2.jpg" class="box">
+         <div class="image">
+            <img src="images/project-2.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>Tunnels</h3>
+            </div>
+         </div>
+      </a>
+
+      <a href="images/project-3.jpg" class="box">
+         <div class="image">
+            <img src="images/project-3.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>buildings</h3>
+            </div>
+          
+         </div>
+      </a>
+
+      <a href="images/project-4.jpg" class="box">
+         <div class="image">
+            <img src="images/project-4.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>Tower</h3>
+            </div>
+         </div>
+      </a>
+
+      <a href="images/project-5.jpg" class="box">
+         <div class="image">
+            <img src="images/project-5.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>Residential building</h3>
+            </div>
+         </div>
+      </a>
+
+      <a href="images/project-6.jpg" class="box">
+         <div class="image">
+            <img src="images/project-6.jpg" alt="">
+         </div>
+         <div class="content">
+            <div class="info">
+               <h3>bridges</h3>
+            </div>
+         </div>
+      </a>
+
+   </div>
+
+</section>
+
+<!-- projects section ends -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+
+lightGallery(document.querySelector('.projects .box-container'));
+
+</script>
+
+</body>
+</html>

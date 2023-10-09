@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Website-Admin</title>
+
+<!-- font awesome cdn link  -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+<!-- custom css file link  -->
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+body{
+background: url(images/home-slide-2.jpg) no-repeat;
+}
+.container {
+	background-color: black;
+	padding: 50px;
+	color:#4dd8f8
+}
+</style>
+</head>
+
+<body>
+	<!-- header section starts  -->
+	<header class="header">
+		<a href="#" class="logo">Construct<span>zen</span></a>
+		<nav class="navbar">				
+				<a th:href="@{/admin-dashboard}">Admin</a>
+				<a th:href="@{/contractor}">Manage Contractor</a>
+				<a th:href="@{/project}">Manage Project</a>
+				<a th:href="@{/admin-login}">Log Out</a>
+		</nav>
+
+		<div class="icons">
+			<div id="menu-btn" class="fas fa-bars"></div>
+		</div>
+	</header>
+	<!-- header section ends -->
+ <div class="container">
+        <div class="main-content">
+            <h1>Welcome to the Admin Dashboard of Constructzen!</h1>
+         </div>
+    </div>
+	
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+	<!-- custom js file link  -->
+	<script src="js/script.js"></script>
+
+	<script>
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+</body>
+</html>
